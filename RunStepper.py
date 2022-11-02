@@ -6,6 +6,7 @@ import sys
 Wegstrecke_Positiv = int(0)
 Wegstrecke_Negativ = int(0)
 
+
 Motor2 = DRV8825(dir_pin=24, step_pin=18, enable_pin=4, mode_pins=(21, 22, 27))
 
 
@@ -49,11 +50,16 @@ if sys.argv[1] == "Rellativ_-":
     datei.close()
     Wegstrecke_Negativ = Wegstrecke                      # ÜBERGABEWERT: Neue_position
 
-    Motor2.SetMicroStep('softward', 'halfstep')
-    Motor2.TurnStep(Dir='forward', steps=Wegstrecke_Positiv, stepdelay=0.0010)
-    time.sleep(0.5)
-    Motor2.TurnStep(Dir='backward', steps=Wegstrecke_Negativ, stepdelay=0.0010)
-    Motor2.Stop()
+if  
+
+
+
+Motor2.SetMicroStep('softward', 'halfstep')
+Motor2.TurnStep(Dir='forward', steps=Wegstrecke_Positiv, stepdelay=0.0010)
+print("Jes")
+time.sleep(0.5)
+Motor2.TurnStep(Dir='backward', steps=Wegstrecke_Negativ, stepdelay=0.0010)
+Motor2.Stop()
 
 
 """                                     
