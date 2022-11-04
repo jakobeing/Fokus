@@ -3,8 +3,6 @@ import time
 from DRV8825 import DRV8825
 import sys
 
-print("test 1")
-
 Wegstrecke_Positiv = int(0)
 Wegstrecke_Negativ = int(0)
 
@@ -16,7 +14,7 @@ print("test 2")
 if sys.argv[1] == "absolut":
     soll_possition = int(sys.argv[2])                            # Werte werden gehohlt.
     datei = open('List-Fokus .rtf','r')                          # Werte werden gehohlt.   # Hier muss sich die passente Position gehohlt werden
-    Aktuelle_position = int(datei.readline(9999999))             # Werte werden gehohlt.
+    Aktuelle_position = int(datei.readline())             # Werte werden gehohlt.
     datei.close()                                                # Werte werden gehohlt.
     datei = open('List-Fokus .rtf','w')                          # Neuer wert wird gschrieben
     datei.write(str(soll_possition))                             # Neuer wert wird gschrieben
